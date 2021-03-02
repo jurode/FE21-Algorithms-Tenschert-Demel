@@ -1,0 +1,29 @@
+# START
+
+INPUT "enter amount of money, you want to withdraw"
+        => variable [varAmount]
+
+WHILE [varAmount] / 10 = with rest
+
+    OUTPUT "please type in a correct number"
+
+    INPUT "enter amount of money, you want to withdraw"
+        => variable [varAmount]
+
+UNTIL [varAmount] / 10 = without rest
+
+[varAmount] / 100 = [var100] (rounded to 0 decimals)
+
+[varAmount] = [varAmount] - [var100] * 100
+
+[varAmount] / 50 = [var50]  (rounded to 0 decimals)
+
+[varAmount] = [varAmount] - [var50] * 50
+
+[varAmount] / 20 = [var20]  (rounded to 0 decimals)
+
+[varAmount] = [varAmount] - [var20] * 20
+
+OUTPUT:
+    Withdraw the user the following notes:
+        [var100] Hundreds, [var50] Fifty, [var20] Twenty, [varAmount] Tens
