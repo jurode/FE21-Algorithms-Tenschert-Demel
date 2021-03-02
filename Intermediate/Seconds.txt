@@ -5,28 +5,22 @@ OUTPUT: Please type in any amount of seconds.
 
 INPUT: [intUser]
 
-[intUser] / 604800 = [varWeeks rounded down to 0 decimal places]
-OUTPUT: [varWeeks]
+[intUser] / 604800 = [varWeeks (rounded down to 0 decimal places)]
 
 [intUser]=[intUser]-[varWeeks]*604800
 
-[intUser] / 86400 =
-[varDays rounded down to 0 decimal places]
-OUTPUT: [varDays]
+[intUser] / 86400 = [varDays rounded...]
 
 [intUser]=[intUser]-[varDays]*86400
 
-[intUser] / 3600 =
-[varHours rounded...]
-OUTPUT: [varHours]
+[intUser] / 3600 = [varHours rounded...]
 
 [intUser]=[intUser]-[varHours]*3600
 
-[intUser] / 60 =
-[varMinutes rounded...]
-OUTPUT: [varMinutes]
+[intUser] / 60 = [varMinutes rounded...]
 
-[intUser]=[intUser]+[varMinutes]*60
-OUTPUT: [varSeconds]
+[intUser]=[intUser]-[varMinutes]*60
+
+OUTPUT: [varWeeks] weeks, [varDays] days, [varHours] hours, [varMinutes] Minutes, [intUser] seconds
 
 #END
