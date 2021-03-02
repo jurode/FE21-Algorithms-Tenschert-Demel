@@ -12,17 +12,36 @@ WHILE [varAmount] / 10 = with rest
 
 UNTIL [varAmount] / 10 = without rest
 
+
 [varAmount] / 100 = [var100] (rounded to 0 decimals)
 
-[varAmount] = [varAmount] - [var100] * 100
+IF [var100] <= [stock-note-100] THEN
+
+    [varAmount] = [varAmount] - [var100] * 100
+
+END IF
 
 [varAmount] / 50 = [var50]  (rounded to 0 decimals)
 
-[varAmount] = [varAmount] - [var50] * 50
+IF [var50] <= [stock-note-50] THEN
+
+    [varAmount] = [varAmount] - [var50] * 50
+
+END IF
 
 [varAmount] / 20 = [var20]  (rounded to 0 decimals)
 
-[varAmount] = [varAmount] - [var20] * 20
+IF [var20] <= [stock-note-20] THEN
+
+    [varAmount] = [varAmount] - [var20] * 20
+
+END IF
+
+IF [varAmount] > [stock-note-10] THEN
+    
+    OUTPUT "We don't have enough money, please go away."
+
+END IF
 
 OUTPUT:
     Withdraw the user the following notes:
