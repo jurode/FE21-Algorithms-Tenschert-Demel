@@ -1,0 +1,32 @@
+
+#START
+
+OUTPUT: Please type in any amount of seconds.
+
+INPUT: [intUser]
+
+[intUser] / 604800 = [varWeeks rounded down to 0 decimal places]
+OUTPUT: [varWeeks]
+
+[intUser]=[intUser]-[varWeeks]*604800
+
+[intUser] / 86400 =
+[varDays rounded down to 0 decimal places]
+OUTPUT: [varDays]
+
+[intUser]=[intUser]-[varDays]*86400
+
+[intUser] / 3600 =
+[varHours rounded...]
+OUTPUT: [varHours]
+
+[intUser]=[intUser]-[varHours]*3600
+
+[intUser] / 60 =
+[varMinutes rounded...]
+OUTPUT: [varMinutes]
+
+[intUser]=[intUser]+[varMinutes]*60
+OUTPUT: [varSeconds]
+
+#END
