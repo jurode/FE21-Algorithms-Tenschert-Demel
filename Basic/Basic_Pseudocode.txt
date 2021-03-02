@@ -1,0 +1,26 @@
+
+# START
+
+> INPUT:
+    Define and type in "N"
+    (N is maximum Number)
+
+Computer picks random number from 1 to N
+    => variable is [intComputer]
+
+REPEAT 
+    
+    > INPUT:
+    Random integer from 1 to N
+    => variable is [intUser]
+
+    IF [intComputer] > [intUser] THEN
+        OUTPUT "My number is higher than [intUser], guess again higher!"
+    
+    ELSE
+        OUTPUT "My number is lower thatn [intUser], guess again lower!"
+
+UNTIL [intComputer] = [intUser]
+    OUTPUT "You are correct, the random number is [intUser]."
+
+# END   
