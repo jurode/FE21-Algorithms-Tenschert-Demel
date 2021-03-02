@@ -1,25 +1,34 @@
 
 # START
 
-> INPUT:
-    Define and type in "N"
-    (N is maximum Number)
+OUTPUT: You will guess the computers number from 1 to N. Please define N.
+
+INPUT:
+    (N is maximum Number, variable is [N])
 
 Computer picks random number from 1 to N
     => variable is [intComputer]
 
-REPEAT 
-    
-    > INPUT:
-    Random integer from 1 to N
-    => variable is [intUser]
+REPEAT    
+    INPUT: 
+        Random integer from 1 to N
+        => variable is [intUser]
 
-    IF [intComputer] > [intUser] THEN
-        OUTPUT "My number is higher than [intUser], guess again higher!"
-    
-    ELSE
-        OUTPUT "My number is lower thatn [intUser], guess again lower!"
+        IF 1<= [intUser] <= N THEN {
 
+            IF [intComputer] > [intUser] THEN {
+            OUTPUT "My number is higher than [intUser], guess again higher!"
+            }
+
+            ELSE {
+            OUTPUT "My number is lower than [intUser], guess again lower!"
+            }
+        }
+
+        ELSE {
+         OUTPUT "Error. Your number outside the number range. Please type in a number inside the range."
+        }
+            
 UNTIL [intComputer] = [intUser]
     OUTPUT "You are correct, the random number is [intUser]."
 
